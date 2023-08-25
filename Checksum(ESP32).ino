@@ -57,12 +57,13 @@ void loop()
       checksum += c;
       Serial.println(checksum);
       }
+      Serial.print("Checksum calculado: ");
       Serial.println(ChecksumCal);
+      Serial.print("Checsum recivido; ");
       Serial.println(ChecksumRecivido);
-      Serial.println(DataRecivida);
       if (ChecksumRecivido == ChecksumCal) 
       {
-       
+        Serial.println("¡Checksum coincide!");
         Serial.println("Un paquete nuevo a llegado");
         Serial.print("Encabezado: ");
         Serial.println(encabezado);
@@ -144,3 +145,4 @@ void loop()
     }
   }
 }
+
